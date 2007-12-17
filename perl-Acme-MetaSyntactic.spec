@@ -16,7 +16,6 @@ BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(LWP::UserAgent)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Acme::MetaSyntactic is a perl module to generate good (as well as funny)
