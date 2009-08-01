@@ -1,22 +1,22 @@
-%define module	Acme-MetaSyntactic
-%define name	perl-%{module}
-%define version 0.99
-%define	release	%mkrel 4
+%define upstream_name	 Acme-MetaSyntactic
+%define upstream_version 0.99
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Generates themed metasyntactic variables
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source:		http://www.cpan.org/modules/by-module/Acme/%{module}-%{version}.tar.bz2
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Acme/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildRequires:  perl(LWP::UserAgent)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Acme::MetaSyntactic is a perl module to generate good (as well as funny)
@@ -25,7 +25,7 @@ usual "foo" "bar" list, to the fight sound effects from the Batman 60s TV
 serial.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +47,3 @@ rm -rf %{buildroot}
 %{perl_vendorlib}/Acme
 %{_mandir}/*/*
 %{_bindir}/*
-
-
