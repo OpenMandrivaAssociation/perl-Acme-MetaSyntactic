@@ -36,6 +36,8 @@ serial.
 %{perl_vendorlib}/Acme
 %{_mandir}/*/*
 %{_bindir}/*
+/usr/lib/perl5/vendor_perl/5.16.3/Test/MetaSyntactic.pm
+/usr/lib/perl5/vendor_perl/5.16.3/eta.pm
 
 
 %changelog
