@@ -1,2 +1,4 @@
+removed_sources:
+  Acme-MetaSyntactic-0.99.tar.bz2: 70fe16a306832aa3d5dcb18e0c2780ad117ed71e
 sources:
-  "Acme-MetaSyntactic-0.99.tar.bz2": 70fe16a306832aa3d5dcb18e0c2780ad117ed71e
+  Acme-MetaSyntactic-1.012.tar.gz: afb1ca2c527efef2fa6e0ff653f96e71a261998e

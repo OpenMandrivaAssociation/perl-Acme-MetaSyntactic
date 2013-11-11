@@ -1,15 +1,15 @@
 %define upstream_name	 Acme-MetaSyntactic
-%define upstream_version 0.99
+%define upstream_version 1.012
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	Generates themed metasyntactic variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Acme/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	http://www.cpan.org/modules/by-module/Acme/Acme-MetaSyntactic-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(LWP::UserAgent)
@@ -178,4 +178,5 @@ serial.
 
 * Mon Jan 17 2005 Rafael Garcia-Suarez <rgarciasuarez@mandrakesoft.com> 0.05-1mdk
 - Initial MDK release.
+
 
