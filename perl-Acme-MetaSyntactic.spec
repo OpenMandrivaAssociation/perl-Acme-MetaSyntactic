@@ -1,15 +1,15 @@
 %define upstream_name	 Acme-MetaSyntactic
-%define upstream_version 1.012
+%define upstream_version 1.015
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Generates themed metasyntactic variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Acme/Acme-MetaSyntactic-%{upstream_version}.tar.gz
+Url:		https://github.com/book/Acme-MetaSyntactic
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Acme-MetaSyntactic-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
