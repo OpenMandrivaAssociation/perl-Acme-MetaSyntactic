@@ -1,15 +1,13 @@
 %define upstream_name	 Acme-MetaSyntactic
-%define upstream_version 1.015
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	1.015
+Release:	2
 
 Summary:	Generates themed metasyntactic variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/book/Acme-MetaSyntactic
-Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Acme-MetaSyntactic-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/B/BO/BOOK/Acme-MetaSyntactic-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -23,7 +21,7 @@ usual "foo" "bar" list, to the fight sound effects from the Batman 60s TV
 serial.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
@@ -44,9 +42,7 @@ serial.
 %changelog
 * Sat Aug 01 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.990.0-1mdv2010.0
 + Revision: 406833
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.99-4mdv2009.0
+- rebuild using %1.015 Wed Jul 30 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.99-4mdv2009.0
 + Revision: 255258
 - rebuild
 
